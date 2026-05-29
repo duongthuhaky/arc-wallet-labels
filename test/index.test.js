@@ -1,0 +1,2 @@
+import test from 'node:test';import assert from 'node:assert/strict';import {normalizeAddress,labelRisk,addLabel} from '../src/index.js';
+test('labels wallets',()=>{assert.equal(normalizeAddress('0xABCDEFabcdefABCDEFabcdefABCDEFabcdefABCD'),'0xabcdefabcdefabcdefabcdefabcdefabcdefabcd');assert.equal(labelRisk({tags:['cex']}),'known');assert.equal(Object.keys(addLabel({},'0xABCDEFabcdefABCDEFabcdefABCDEFabcdefABCD','treasury')).length,1);});
